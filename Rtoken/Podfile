@@ -5,8 +5,7 @@ target 'Rtoken' do
   use_frameworks!
   pod 'BigInt'
   pod 'R.swift'
-  
-  #R.swift就是为解决这个问题而生，具有强类型关联、编译错误检查、自动代码填充的功能，即安全又方便。基本原理就是在Xcode每次build期间自动读取解析工程目录内引用的资源文件以及创建的资源文件（例如TableViewCell.nib），将这些资源以代码的形式封装在一个动态生成的R.generated.swift的文件中。例如我在Assets.xcassets中添加了一个settings_icon图标，编译后R.generated.swift中将自动得到下面的代码段：
+#R.swift就是为解决这个问题而生，具有强类型关联、编译错误检查、自动代码填充的功能，即安全又方便。基本原理就是在Xcode每次build期间自动读取解析工程目录内引用的资源文件以及创建的资源文件（例如TableViewCell.nib），将这些资源以代码的形式封装在一个动态生成的R.generated.swift的文件中。例如我在Assets.xcassets中添加了一个settings_icon图标，编译后R.generated.swift中将自动得到下面的代码段：
   
   pod 'APIKit'
    #也使用了JSONRPCKit + APIKit的框架去进行数据请求
@@ -51,7 +50,8 @@ target 'Rtoken' do
   pod 'TrustWeb3Provider', :git=>'https://github.com/TrustWallet/trust-web3-provider', :commit=>'f4e0ebb1b8fa4812637babe85ef975d116543dfd'
   
   
-  #pod 'JSONRPCKit'
+#  pod 'JSONRPCKit'
+
   #    pod 'TrustSDK'
   #   pod 'TrustWalletSDK'  , :git=>'https://github.com/TrustWallet/TrustSDK-iOS', :branch=>'master'
 end
